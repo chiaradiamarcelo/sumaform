@@ -70,9 +70,10 @@ By default, sumaform deploys hosts with a range of tweaked settings for convenie
    * `auto_connect_to_master`: automatically connects to the Salt Master. Set to `false` to manually configure
  * `proxy` module:
    * `auto_register`: automatically registers the proxy to the SUSE Manager Server. Set to `false` for manual registration
-   * `copy_certificates`: automatically copies SSL certificates from SUSE Manager Server. Set to `false` for manual distribution
+   * `copy_certificates`: automatically copies SSL certificates from the upstream SUSE Manager Server or SUSE Manager Proxy. Requires `publish_private_ssl_key` on the upstream server or proxy. Set to `false` for manual distribution
    * `auto_configure`: automatically runs the `confure-proxy.sh` script which enables Proxy functionality. Set to `false` to run manually. Requires `auto_register` and `copy_certificates`
    * `generate_bootstrap_script`: generates a bootstrap script for traditional clients and copies it in /pub. Set to `false` to generate manually. Requires `auto_configure`
+   * `publish_private_ssl_key`: copies the private SSL key in /pub for cascaded Proxies to copy automatically. Set to `false` for manual distribution. Requires `copy_certificates`
  * `suse_manager_server` module:
    * `username` and `password` define credentials for the first created user (the SUSE Manager Admin)
 
