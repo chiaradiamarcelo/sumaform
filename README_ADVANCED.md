@@ -72,6 +72,7 @@ By default, sumaform deploys hosts with a range of tweaked settings for convenie
    * `auto_register`: automatically registers the proxy to the SUSE Manager Server. Set to `false` for manual registration
    * `copy_certificates`: automatically copies SSL certificates from SUSE Manager Server. Set to `false` for manual distribution
    * `auto_configure`: automatically runs the `confure-proxy.sh` script which enables Proxy functionality. Set to `false` to run manually. Requires `auto_register` and `copy_certificates`
+   * `generate_bootstrap_script`: generates a bootstrap script for traditional clients and copies it in /pub. Set to `false` to generate manually. Requires `auto_configure`
  * `suse_manager_server` module:
    * `username` and `password` define credentials for the first created user (the SUSE Manager Admin)
 

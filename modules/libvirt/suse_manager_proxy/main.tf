@@ -29,6 +29,7 @@ copy_certificates: ${var.copy_certificates}
 auto_configure: ${var.auto_configure}
 server_username: ${var.server_configuration["username"]}
 server_password: ${var.server_configuration["password"]}
+generate_bootstrap_script: ${var.generate_bootstrap_script}
 for_development_only: ${var.for_development_only}
 use_unreleased_updates: ${var.use_unreleased_updates}
 
